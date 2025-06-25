@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+*{
+  box-sizing: border-box;
+  font-size: 0.8vw;
+  user-select: none;
+}

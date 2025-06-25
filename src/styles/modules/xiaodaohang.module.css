@@ -1,0 +1,35 @@
+.xiaodaohang{
+  width: 100%;
+}
+.xiaodaohang1{
+   display: grid;
+   grid-template-columns: auto auto auto auto auto auto;
+   margin-left: 8vw;
+   margin-right: 8vw;
+   margin-bottom: 1vw;
+   justify-items: center;
+   align-items: center; 
+}
+.xiaodaohang2{
+   color: rgb(233, 51, 51);
+   font-size: 1.2vw;
+   font-weight: 900;
+   cursor: pointer;
+}
+.xiaodaohang3{
+    color: rgb(55, 200, 35);
+    font-size: 1.2vw;
+    font-weight: 900;
+    cursor: pointer;
+}
+.xiaodaohang4{
+    color: rgb(0, 0, 0);
+    font-size: 1.2vw;
+    font-weight: 900;
+    cursor: pointer;
+}
+.zhu{
+  padding: 5vw;
+  
+  
+}

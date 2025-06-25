@@ -1,0 +1,32 @@
+.shangping{
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 5rem;
+    position: absolute;
+
+}
+.jiaru{
+    border-radius: 12px;
+    height: 5vw;
+    width: 15vw;
+    border-bottom: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    background-color: #f50;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;  
+    background: linear-gradient(90deg, rgb(255, 203, 0), rgb(255, 148, 2));
+    position: absolute;
+    right: 10vw;
+    top: 70vh;
+}
+.zhu{
+    margin: 5vw;
+    position: relative;
+}

@@ -1,0 +1,32 @@
+.zhu{
+   font-weight: 1000;
+   font-size: 5rem;
+}
+.hao{
+  font-weight: 600;
+  font-size: 3rem;
+}
+.zhu1{
+    padding: 1vw;
+    padding-left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.jiajian{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.zhiti{
+        font-size: 2rem;
+    font-weight: 500;
+}
+.zhiti1{
+        font-size: 3rem;
+    font-weight: 500;
+}

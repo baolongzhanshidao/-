@@ -1,0 +1,81 @@
+.zhu{
+    padding-left: 7.2rem;
+    padding-right: 7.2rem;
+    width: 100%;
+}
+.daohang{
+    width: 100%;
+    
+}
+.daohang1{
+    height: 2rem;
+}
+.daohang2{
+    width: 58vw;
+    margin-top: 0.75rem;
+    display: inline-block;
+}
+.daohangbiaoqian{
+    margin-right: 1.2rem;
+    float: left;
+}
+.daohangbiaoqian:hover .xiantext{
+    display: block;
+    cursor: pointer;
+}
+.daohangbiaoqian:hover .jiantou{
+    transform: rotate(-91deg);
+}
+.daohangbiaoqian:hover{
+    color: #ffa62a;
+}
+.daohang3{
+    display: inline-block;
+}
+.jiantou{
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.75s;
+    -webkit-transition: transform 0.75s;
+    margin-right: 0.3vw;
+}
+.xiantext{
+    position: relative;
+    margin-top: -1px;
+    display: none;
+    z-index: 10001;
+}
+.xiantext1{
+    position: absolute;
+    top: 0.5vw;
+    padding: 0.5vw;
+    line-height: normal;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0px 4px 24px 0px rgba(10, 10, 51, 0.12), 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0px 4px 24px 0px rgba(10, 10, 51, 0.12), 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 4px 24px 0px rgba(10, 10, 51, 0.12), 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    background: #FFF;
+   
+}
+.xiantext2{
+    line-height: 250%;
+    display: block;
+    padding: 0 8px;
+    white-space: nowrap;
+    color: #000;
+    border-radius: 8px;
+}
+.xiantext1::before{
+    content: '';
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+}
+.xiantext2:hover{
+    background-color: #dfdfdf;
+    color: #000;
+}

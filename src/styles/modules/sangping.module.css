@@ -1,0 +1,17 @@
+.shangping{
+    height: 45vh;
+    width: 18vw;
+    background-color: rgb(252, 248, 248);
+    display: inline-block;
+    margin: 1.8vw;
+    border-radius: 12px;
+    align-items: center;
+    justify-items: center;
+}
+.text{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.text1{
+    font-size: 1.5rem;
+}

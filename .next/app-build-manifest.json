@@ -1,0 +1,83 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/chunks/app/_not-found/page-0d38d0086d4a28c3.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/css/46ae77e92e5b840f.css",
+      "static/chunks/app/layout-9a7c240e171c0a34.js"
+    ],
+    "/api/denglu/route": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/chunks/app/api/denglu/route-6bce6d98d6f659ad.js"
+    ],
+    "/api/gouwuche/route": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/chunks/app/api/gouwuche/route-3aa009977da6fd57.js"
+    ],
+    "/api/xiang/[xiangq]/route": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/chunks/app/api/xiang/[xiangq]/route-ae78083281d6419e.js"
+    ],
+    "/api/shuju/route": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/chunks/app/api/shuju/route-68804868df8bc312.js"
+    ],
+    "/about/denglu/page": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/chunks/604-d89b4ea9cd7b32c8.js",
+      "static/chunks/app/about/denglu/page-0bedd8822a6e8f39.js"
+    ],
+    "/about/gouwuche/page": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/css/60a3da796007b453.css",
+      "static/chunks/604-d89b4ea9cd7b32c8.js",
+      "static/chunks/app/about/gouwuche/page-064810976b7b9bff.js"
+    ],
+    "/about/xiangqing/[xiang]/page": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/css/16b2d607929fd32f.css",
+      "static/chunks/604-d89b4ea9cd7b32c8.js",
+      "static/chunks/app/about/xiangqing/[xiang]/page-a0f372c929a996d1.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-25469fe5623fd76e.js",
+      "static/chunks/4bd1b696-fd3bac3735e840ea.js",
+      "static/chunks/684-cec4f4ec8ac1d29c.js",
+      "static/chunks/main-app-e37461116b632a76.js",
+      "static/css/955d9665684a93f9.css",
+      "static/chunks/604-d89b4ea9cd7b32c8.js",
+      "static/chunks/355-a569e4365e4042d4.js",
+      "static/chunks/app/page-10ff34f527a8b639.js"
+    ]
+  }
+}
