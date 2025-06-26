@@ -12,12 +12,10 @@ const useScrollLoader = (callback: () => void,options: Options = {}) => {
   const isMountedRef = useRef(true)
   const scrollPositionRef = useRef(0)
 
-  // 保存滚动位置
   const saveScrollPosition = useCallback(() => {
     scrollPositionRef.current = window.scrollY
   }, [])
   useEffect(() => {
-    // 添加路由变更监听
     window.addEventListener('beforeunload', saveScrollPosition)
     isMountedRef.current = true
     return () => {

@@ -1,6 +1,7 @@
 process.env.__NEXT_STRICT_MODE = 'false';
 import { render, act } from '@testing-library/react';
 import useSWR from '@/hooks/useswr'
+
 it('应合并同时发起的请求', async () => {
   const fetcher = jest.fn(() => 
     new Promise(resolve => setTimeout(() => resolve('data'), 100))

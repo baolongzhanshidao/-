@@ -29,10 +29,16 @@ export const useCartStore = (set:any,get:any):gouwuche => ({
      huanchun:[],
      chongshi:async(id:number)=>{
        const {huanchun} = get()
+       huanchun.filter((u: { is: boolean; })=>u.is!=true)
        const chong = huanchun.find((i: { is: boolean; })=>i.is==false)
        const chongshi =async ()=>{
+        try{
          await axios.post(`/api/gouwuche?id=${id}`,{id:id,chaozhuo:chong.chaozhuo,banben:chong.banben})
-         
+         chong.map((u: any)=>true?{is: true}:null)
+         alert('重试成功')
+        }catch(error){
+         alert('超时，刷新浏览器试试')
+        }
        }
        setTimeout(chongshi,3000)
      },
