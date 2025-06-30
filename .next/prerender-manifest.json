@@ -1,6 +1,30 @@
 {
   "version": 4,
   "routes": {
+    "/about/gouwuche": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/about/gouwuche",
+      "dataRoute": "/about/gouwuche.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/": {
       "experimentalBypassFor": [
         {
@@ -48,30 +72,6 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/about/gouwuche": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/about/gouwuche",
-      "dataRoute": "/about/gouwuche.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "dynamicRoutes": {
@@ -103,8 +103,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "b63201f5223d427ac56e571da5421d3d",
-    "previewModeSigningKey": "33586355fdda892935bdcaffebb9109abda8eb309a24109aab14ec871c476fef",
-    "previewModeEncryptionKey": "20d5924e492dbf676f76e074d2a22f96654dd23af6614c54d181699318db1252"
+    "previewModeId": "7d1d076ae48a65337c6d77eb674acd9a",
+    "previewModeSigningKey": "5ace09da53cd6e97fd185a369e6da7ed91a7c8e7ac40fb56eb29e10c1a5bb450",
+    "previewModeEncryptionKey": "a50844199a28b4e2db5cf1d3a32821d475f85b1cbf5b473bcfecc24f8b1290c4"
   }
 }

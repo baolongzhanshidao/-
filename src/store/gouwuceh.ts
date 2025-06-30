@@ -22,10 +22,15 @@ export interface gouwuche {
    huanchun:Culi[],
    chongshi:(id:number)=>void
    diaodu:boolean
+   gianche:(id:number)=>void
 }
 export const useCartStore = (set:any,get:any):gouwuche => ({  
      shangping:[],
      diaodu:true,
+     gianche:(id)=>{
+      if(get().huanchun)
+        get().chongshi(id)
+     },
      time:0,
      wangluo:true,
      huanchun:[],
@@ -33,17 +38,24 @@ export const useCartStore = (set:any,get:any):gouwuche => ({
        const {huanchun} = get()
        const shuanchun = [...huanchun].sort((a: { banben: number; },b: { banben: number; })=>a.banben-b.banben)
        const chong = shuanchun.find((i: { is: boolean; })=>i.is==false)
-       shuanchun.filter((u: { is: boolean; })=>u.is!=true)
+
        console.log(chong)
        for(const op of shuanchun){
-       const sss = 
-       async()=>{ 
+        if(!get().diaodu) break
+        set({diaodu:false})
+        const sss = async()=>{ 
         try{
-         await axios.post(`/api/gouwuche?id=${id}`,{id:chong.key,chaozhuo:chong.chaozhuo,banben:chong.banben}).then(res=>console.log(res.data,'成功'))
-         set({huanchun:shuanchun.filter((u: { key:number })=>u.key!=chong.key)})
+         await axios.post(`/api/gouwuche?id=${id}`,{id:chong.key,chaozhuo:chong.chaozhuo,banben:chong.banben}).then(res=>console.log(res.data,'成功',huanchun))
+         set({huanchun:get().huanchun.filter((u: { banben:number })=>u.banben != chong.banben)})
+         set({diaodu:true})
+         get().gianche(id)
         }catch(error){
          alert('超时，刷新浏览器试试')
+         if(chong.chaozhuo=='加')
          set((start:any)=>{return {shangping:start.shangping.map((u:any)=>u.id==chong.key?{id:u.id,shu:u.shu-1,banben:u.banben}:u),chong}})
+         else set((start:any)=>{return {shangping:start.shangping.map((u:any)=>u.id==chong.key?{id:u.id,shu:u.shu+1,banben:u.banben}:u),chong}})
+         set({diaodu:true})
+         get().gianche(id)
         }}
         setTimeout(()=>sss(),3000)
        }

@@ -1,9 +1,9 @@
 {
   "/_not-found/page": "/_not-found",
   "/api/denglu/route": "/api/denglu",
-  "/api/shuju/route": "/api/shuju",
   "/api/gouwuche/route": "/api/gouwuche",
   "/api/xiang/[xiangq]/route": "/api/xiang/[xiangq]",
+  "/api/shuju/route": "/api/shuju",
   "/about/denglu/page": "/about/denglu",
   "/about/gouwuche/page": "/about/gouwuche",
   "/page": "/",
