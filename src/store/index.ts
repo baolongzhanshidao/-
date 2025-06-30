@@ -21,7 +21,7 @@ const wangluo = (config:any) =>(set:any,get:any,api:any)=>{
    return config(newset,get,api)
 }
 
-export const useStore = create<any>(
+export const useStore = create<StoreState>(
   wangluo((set: any,get: any) => ({
 // 购物车
     ...useCartStore(set,get),

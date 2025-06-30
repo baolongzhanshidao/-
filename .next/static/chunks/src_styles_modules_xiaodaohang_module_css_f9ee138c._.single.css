@@ -1,0 +1,40 @@
+/* [project]/src/styles/modules/xiaodaohang.module.css [app-client] (css) */
+.xiaodaohang-module__9XpLlW__xiaodaohang {
+  width: 100%;
+}
+
+.xiaodaohang-module__9XpLlW__xiaodaohang1 {
+  grid-template-columns: auto auto auto auto auto auto;
+  place-items: center;
+  margin-bottom: 1vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  display: grid;
+}
+
+.xiaodaohang-module__9XpLlW__xiaodaohang2 {
+  color: #e93333;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: 900;
+}
+
+.xiaodaohang-module__9XpLlW__xiaodaohang3 {
+  color: #37c823;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: 900;
+}
+
+.xiaodaohang-module__9XpLlW__xiaodaohang4 {
+  color: #000;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: 900;
+}
+
+.xiaodaohang-module__9XpLlW__zhu {
+  padding: 5vw;
+}
+
+/*# sourceMappingURL=src_styles_modules_xiaodaohang_module_css_f9ee138c._.single.css.map*/

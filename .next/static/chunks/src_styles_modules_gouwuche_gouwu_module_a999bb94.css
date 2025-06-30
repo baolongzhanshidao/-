@@ -1,0 +1,39 @@
+/* [project]/src/styles/modules/gouwuche/gouwu.module.css [app-client] (css) */
+.gouwu-module__VwjdHq__zhu {
+  font-size: 5rem;
+  font-weight: 1000;
+}
+
+.gouwu-module__VwjdHq__hao {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.gouwu-module__VwjdHq__zhu1 {
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw 1vw 1vw 5vw;
+  display: grid;
+}
+
+.gouwu-module__VwjdHq__jiajian {
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.gouwu-module__VwjdHq__zhiti {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.gouwu-module__VwjdHq__zhiti1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+
+/*# sourceMappingURL=src_styles_modules_gouwuche_gouwu_module_a999bb94.css.map*/

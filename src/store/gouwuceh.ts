@@ -1,5 +1,5 @@
 import axios from "axios";
-import { start } from "repl";
+
 interface Cart{
   id:number
   shu:number
@@ -7,7 +7,7 @@ interface Cart{
 }
 interface Culi{
   is:boolean
-  key:string
+  key:number
   banben:number
   oldbanben:number
   chaozhuo:string
@@ -21,26 +21,32 @@ export interface gouwuche {
    wangluo:boolean,
    huanchun:Culi[],
    chongshi:(id:number)=>void
+   diaodu:boolean
 }
 export const useCartStore = (set:any,get:any):gouwuche => ({  
      shangping:[],
+     diaodu:true,
      time:0,
      wangluo:true,
      huanchun:[],
-     chongshi:async(id:number)=>{
+      chongshi:async(id:number)=>{
        const {huanchun} = get()
-       huanchun.filter((u: { is: boolean; })=>u.is!=true)
-       const chong = huanchun.find((i: { is: boolean; })=>i.is==false)
-       const chongshi =async ()=>{
+       const shuanchun = [...huanchun].sort((a: { banben: number; },b: { banben: number; })=>a.banben-b.banben)
+       const chong = shuanchun.find((i: { is: boolean; })=>i.is==false)
+       shuanchun.filter((u: { is: boolean; })=>u.is!=true)
+       console.log(chong)
+       for(const op of shuanchun){
+       const sss = 
+       async()=>{ 
         try{
-         await axios.post(`/api/gouwuche?id=${id}`,{id:id,chaozhuo:chong.chaozhuo,banben:chong.banben})
-         chong.map((u: any)=>true?{is: true}:null)
-         alert('重试成功')
+         await axios.post(`/api/gouwuche?id=${id}`,{id:chong.key,chaozhuo:chong.chaozhuo,banben:chong.banben}).then(res=>console.log(res.data,'成功'))
+         set({huanchun:shuanchun.filter((u: { key:number })=>u.key!=chong.key)})
         }catch(error){
          alert('超时，刷新浏览器试试')
-        }
+         set((start:any)=>{return {shangping:start.shangping.map((u:any)=>u.id==chong.key?{id:u.id,shu:u.shu-1,banben:u.banben}:u),chong}})
+        }}
+        setTimeout(()=>sss(),3000)
        }
-       setTimeout(chongshi,3000)
      },
      settongbu: async ()=>{
       const user = get().user
@@ -51,7 +57,6 @@ export const useCartStore = (set:any,get:any):gouwuche => ({
         hong.ss.shuju = hong.ss.shuju.map((u: any)=>true?{id:u.id,shu:u.shu,banben:-1}:null)
         console.log(hong.ss.shuju)
         set(()=>{return{ shangping:hong.ss.shuju}
-        
      })}
     } catch(tianjiachuowu){console.log(tianjiachuowu)}
     },
@@ -83,19 +88,23 @@ export const useCartStore = (set:any,get:any):gouwuche => ({
       console.log(error)
       if(axios.isAxiosError(error)){
         if(error.request.status == 409){
+          alert("超时，稍等")
           console.log('版本冲突正在重试',error.response?.data)
           let data = error.response?.data
           set((start:any)=>{
-            return start.huanchun.push({is:false,key:`/api/gouwuche?id=${data.id}`,banben:shuju.banben,oldbanben:data.banben,chaozhuo:data.chaozhuo})})
-          get().chongshi()
-        }
-      }else alert('错误请重试')
+            return {
+              huanchun:[...start.huanchun,{is:false,key:data.id,banben:data.kehubanben,oldbanben:data.banben,chaozhuo:data.chaozhuo}]
+            }})
+              console.log(get().huanchun)
+              console.log(get().shangping)
+          get().chongshi(user)
+        } else 
+      {alert('错误请重试')
       set((start:any)=>{
-         const s = start.shangping.find((u: { id: number,shu:number })=>u.id===id)
+         const s = start.shangping.find((u:any)=>u.id===id)
          if(s.shu<=1){return {shangping:start.shangping.filter((iid: any)=>iid.shu!=1)}}
-         else return  {shangping: start.shangping.map((shang:{id:number,shu:number})=>shang.id==id?{id:id,shu:shang.shu-1}:shang)}
-        })
-        
+         else return  {shangping: start.shangping.map((shang:any)=>shang.id==id?{id:id,shu:shang.shu-1,banben:shang.banben-1}:shang)}
+        }) }}
     }
     },
       shangpingjian: async (id:number)=>{
@@ -122,13 +131,18 @@ export const useCartStore = (set:any,get:any):gouwuche => ({
           console.log('版本冲突正在重试',error.response?.data)
           let data = error.response?.data
           set((start:any)=>{
-            return start.huanchun.push({is:false,key:`/api/gouwuche?id=${data.id}`,banben:shuju.banben,oldbanben:data.banben,chaozhuo:data.chaozhuo})})
-          get().chongshi()
-        }}
+            return {
+              huanchun:[...start.huanchun,{is:false,key:data.id,banben:data.kehubanben,oldbanben:data.banben,chaozhuo:data.chaozhuo}]
+            }})
+              console.log(get().huanchun)
+              console.log(get().shangping)
+          get().chongshi(user)
+        }
+        else{
       alert('错误请重试')
       set((statr:any)=>{
          return  {shangping:statr.shangping.map((shang:{id:number,shu:number})=>shang.id==id?{id:id,shu:shang.shu+1}:shang)}
-      })
+      })}}
     }
     },
     

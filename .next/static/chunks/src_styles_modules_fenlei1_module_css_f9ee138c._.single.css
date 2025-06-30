@@ -1,0 +1,63 @@
+/* [project]/src/styles/modules/fenlei1.module.css [app-client] (css) */
+.fenlei1-module__XBNfkq__grid {
+  grid-template-columns: 1.5fr 1fr;
+  display: grid;
+}
+
+.fenlei1-module__XBNfkq__div {
+  background-color: #f7f7f7;
+  background-image: url("/image/1.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  width: 20vw;
+  height: 14vh;
+  margin: 1vw 1vw 1vw 2vw;
+  display: block;
+  position: relative;
+}
+
+.fenlei1-module__XBNfkq__div1 {
+  background-color: #f7f7f7;
+  background-image: url("/image/2.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  width: 20vw;
+  height: 14vh;
+  margin: 1vw 1vw 1vw 2vw;
+  display: block;
+  position: relative;
+}
+
+.fenlei1-module__XBNfkq__div2 {
+  background-color: #f7f7f7;
+  background-image: url("/image/3.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  width: 20vw;
+  height: 14vh;
+  margin: 1vw 1vw 1vw 2vw;
+  display: block;
+  position: relative;
+}
+
+.fenlei1-module__XBNfkq__div3 {
+  background-color: #f7f7f7;
+  background-image: url("/image/4.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  width: 20vw;
+  height: 14vh;
+  margin: 1vw 1vw 1vw 2vw;
+  display: block;
+  position: relative;
+}
+
+/*# sourceMappingURL=src_styles_modules_fenlei1_module_css_f9ee138c._.single.css.map*/

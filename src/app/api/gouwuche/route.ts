@@ -25,7 +25,8 @@ export async function POST(request:Request) {
     }
     else {
        return NextResponse.json({
-      banben:banben,
+      kehubanben:banben,
+      banben:a.banben,
       id:id,
       chaozhuo:chaozhuo
     }, { status: 409 });
@@ -35,7 +36,7 @@ export async function POST(request:Request) {
       banben:banben,
       id:id,
       s
-    }, { status: 200 });
+    });
 }
 }
 export async function GET(request:Request) {

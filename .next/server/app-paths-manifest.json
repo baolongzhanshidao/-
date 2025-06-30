@@ -1,11 +1,10 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/api/denglu/route": "app/api/denglu/route.js",
-  "/api/gouwuche/route": "app/api/gouwuche/route.js",
-  "/api/xiang/[xiangq]/route": "app/api/xiang/[xiangq]/route.js",
-  "/api/shuju/route": "app/api/shuju/route.js",
   "/about/denglu/page": "app/about/denglu/page.js",
   "/about/gouwuche/page": "app/about/gouwuche/page.js",
   "/about/xiangqing/[xiang]/page": "app/about/xiangqing/[xiang]/page.js",
+  "/api/denglu/route": "app/api/denglu/route.js",
+  "/api/gouwuche/route": "app/api/gouwuche/route.js",
+  "/api/shuju/route": "app/api/shuju/route.js",
   "/page": "app/page.js"
 }

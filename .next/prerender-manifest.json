@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/about/denglu": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/about/denglu",
-      "dataRoute": "/about/denglu.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/": {
       "experimentalBypassFor": [
         {
@@ -40,6 +16,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/",
       "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/about/denglu": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/about/denglu",
+      "dataRoute": "/about/denglu.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -74,11 +74,37 @@
       ]
     }
   },
-  "dynamicRoutes": {},
+  "dynamicRoutes": {
+    "/about/xiangqing/[xiang]": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/about/xiangqing/([^/]+?)(?:/)?$",
+      "dataRoute": "/about/xiangqing/[xiang].rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/about/xiangqing/([^/]+?)\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "3e1e9bbc48374cc473c6cb25f2d60f6a",
-    "previewModeSigningKey": "fdd436282f632e2afaf5930941cefc64e6e83f8b550fba15bee6dab82103c56a",
-    "previewModeEncryptionKey": "afd4ef837afed0db2d9ee8cf55fadffee3f17ea5dd62b40138f559dff1be2b87"
+    "previewModeId": "b63201f5223d427ac56e571da5421d3d",
+    "previewModeSigningKey": "33586355fdda892935bdcaffebb9109abda8eb309a24109aab14ec871c476fef",
+    "previewModeEncryptionKey": "20d5924e492dbf676f76e074d2a22f96654dd23af6614c54d181699318db1252"
   }
 }

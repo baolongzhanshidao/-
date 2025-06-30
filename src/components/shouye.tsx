@@ -8,7 +8,7 @@ import Gundong from "./zhujian";
 import  Lunbou  from "./tupianlunbou/tupian";
 import Link from "next/link";
 import { useStore } from "@/store/index";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 export default function Home1() {
   return( 
     <>
@@ -27,6 +27,8 @@ export default function Home1() {
 }
 function Daohang(){
   const [time,settime] = useState(new Date())
+  const frameRef = useRef<number>(0); 
+  const timerRef = useRef<any>(null);
   const user = useStore(state =>state.user)
   const isLoggedIn = useStore(state=>state.isLoggedIn)
   const logout = useStore(state=>state.logout)
@@ -34,10 +36,22 @@ function Daohang(){
     logout()
     location.reload()
   }
-  useEffect(()=>{
-  const news = setInterval(()=>settime(new Date()),1000)
-  return ()=>clearInterval(news)
-  },[])
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      settime(now);
+      const msUntilNextSecond = 1000 - now.getMilliseconds();
+      timerRef.current = setTimeout(() => {
+        frameRef.current = requestAnimationFrame(updateTime);
+      }, msUntilNextSecond);
+    };
+    frameRef.current = requestAnimationFrame(updateTime);
+    return () => {
+      cancelAnimationFrame(frameRef.current);
+      clearTimeout(timerRef.current);
+    };
+  }, []);
+  const newtime = `现在是北京时间:${time.toLocaleTimeString('zh-CN')}`
   const hao = (time.getHours()<6 || time.getHours()>18)?'晚上好':(time.getHours()>12)?'下午好':'上午好'
   return(
     <>
@@ -58,7 +72,7 @@ function Daohang(){
         <li className={css.daohangbiaoqian}>网页无障碍(待做)</li>
        </ul>
        <ul className={css.daohang3}>
-          <li className={css.daohangbiaoqian}>{`现在是北京时间:${time.toLocaleTimeString('zh-CN')},${hao}`}</li>
+          <li className={css.daohangbiaoqian}>{newtime},{hao}</li>
           <li className={css.daohangbiaoqian}>
           {!isLoggedIn? <Link href={`/about/denglu/`} prefetch={true} className={css.shouchang}>购物车</Link>
           :<Link href={`/about/gouwuche/?id=${user}`} prefetch={true} className={css.shouchang}>购物车</Link>}
