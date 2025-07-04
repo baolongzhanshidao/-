@@ -1,7 +1,7 @@
 {
   "version": 4,
   "routes": {
-    "/about/gouwuche": {
+    "/about/denglu": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,8 +14,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/about/gouwuche",
-      "dataRoute": "/about/gouwuche.rsc",
+      "srcRoute": "/about/denglu",
+      "dataRoute": "/about/denglu.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -49,7 +49,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/about/denglu": {
+    "/about/gouwuche": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -62,8 +62,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/about/denglu",
-      "dataRoute": "/about/denglu.rsc",
+      "srcRoute": "/about/gouwuche",
+      "dataRoute": "/about/gouwuche.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -103,8 +103,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "7d1d076ae48a65337c6d77eb674acd9a",
-    "previewModeSigningKey": "5ace09da53cd6e97fd185a369e6da7ed91a7c8e7ac40fb56eb29e10c1a5bb450",
-    "previewModeEncryptionKey": "a50844199a28b4e2db5cf1d3a32821d475f85b1cbf5b473bcfecc24f8b1290c4"
+    "previewModeId": "23d94b2c266fb25b69cb7c567bc3be1c",
+    "previewModeSigningKey": "b7405affa755da02ca497b3965ee5366d7b3ef93422ae528c928fe58696835ea",
+    "previewModeEncryptionKey": "a8465ec021ebd5f721f44ebe385d58c1bec6b37c7ef585dde282a6afd3fc31c9"
   }
 }
